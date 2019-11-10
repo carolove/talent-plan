@@ -1,0 +1,11 @@
+[package]
+name = "c_server"
+version = "0.1.0"
+authors = ["chendan <doke.hi@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+tokio = "0.1"
+tokio-io = "0.1"
+futures = "0.1"
+bytes = "0.4"

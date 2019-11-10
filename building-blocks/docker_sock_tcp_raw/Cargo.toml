@@ -1,0 +1,11 @@
+[package]
+name = "docker_sock_tcp_raw"
+version = "0.1.0"
+authors = ["chendan"]
+edition = "2018"
+
+[dependencies]
+quick-error = "1.2.2"
+serde_derive = "1.0.66"
+serde = "1.0.66"
+serde_json = "1.0.21"

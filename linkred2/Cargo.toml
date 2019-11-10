@@ -1,0 +1,28 @@
+[package]
+name = "linkred2"
+version = "0.1.0"
+authors = ["chendan <chendan@tenxcloud.com>"]
+description = "create multi thread async network proxy"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+structopt = "0.3.3"
+failure = "0.1.6"
+serde = { version = "1.0.102", features = ["derive"] }
+serde_json = "1.0.41"
+log = "0.4.8"
+env_logger = "0.7.1"
+
+[dev-dependencies]
+assert_cmd = "0.11"
+criterion = "0.3.0"
+predicates = "1.0.1"
+rand = "0.7.2"
+tempfile = "3.1.0"
+walkdir = "2.2.9"
+
+#[[bench]]
+#name = "engine_bench"
+#harness = false

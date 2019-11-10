@@ -1,0 +1,9 @@
+[package]
+name = "simple-auth-server"
+version = "0.1.0"
+authors = ["chendan <chendan@tenxcloud.com>"]
+edition = "2018"
+
+[dependencies]
+actix-web = "1.0.0"
+env_logger = "0.6"

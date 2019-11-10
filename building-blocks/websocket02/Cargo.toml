@@ -1,0 +1,13 @@
+[package]
+name = "websocket02"
+version = "0.1.0"
+authors = ["root"]
+edition = "2018"
+
+[dependencies]
+ws = "0.8.1"
+clap = "2.31.2"
+env_logger = "0.6"
+term = "0.5.1"
+time = "0.1.39"
+rust_docker = "0.1.1"
