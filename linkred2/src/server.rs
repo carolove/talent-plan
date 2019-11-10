@@ -1,4 +1,5 @@
-use crate::Result;
+use crate::{Result,Request};
+use serde_json::Deserializer;
 use std::net::{TcpListener, TcpStream, ToSocketAddrs};
 use std::io::{BufReader, BufWriter, Write};
 
@@ -30,7 +31,13 @@ impl SidecarServer {
         let peer_addr = tcp.peer_addr()?;
         let reader = BufReader::new(&tcp);
         let mut writer = BufWriter::new(&tcp);
-        println!("listen client addr: {}", peer_addr.to_string());
+        let req_reader = Deserializer::from_reader(reader).into_iter::<Request>();
+
+        for req in req_reader {
+            let req = req?;
+            debug!("Receive request from {}: {:?}", peer_addr, req);
+        }
+
         Ok(())
     }
 }
