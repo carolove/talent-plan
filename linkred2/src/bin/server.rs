@@ -28,4 +28,5 @@ fn main(){
     let mut opt = Opt::from_args();
     info!("Listening on {}", opt.addr);
     let sidecarServer = SidecarServer::new();
+    sidecarServer.run(opt.addr);
 }
